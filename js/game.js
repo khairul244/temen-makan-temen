@@ -37,9 +37,9 @@ Game.Load.prototype = {
     game.load.image('coin', 'images/alpan.png');
     game.load.spritesheet('bg', 'images/bg.png', 350, 350);
     game.load.spritesheet('sound', 'images/sound.png', 28, 22);
-    game.load.audio('music', 'sounds/music.wav');
-    game.load.audio('coin', 'sounds/coin.wav');
-    game.load.audio('death', 'sounds/death.wav');
+    game.load.audio('mmm', 'sounds/mmm.mp3');
+    game.load.audio('tongkol', 'sounds/tongkol.mp3');
+    game.load.audio('ahir', 'sounds/ahir.mp3');
   },
   create: function() {
     game.state.start('Menu');
@@ -132,11 +132,11 @@ Game.Play.prototype = {
     this.level.add(this.score_label);
     this.level.x = w / 2;
     this.level.y = w / 2;
-    this.music = game.add.sound('music');
+    this.music = game.add.sound('mmm');
     if (sound) this.music.play('', 0, 0.4, true);
-    this.coin_s = game.add.sound('coin');
+    this.coin_s = game.add.sound('tongkol');
     this.coin_s.volume = 0.3;
-    dead_s = game.add.sound('death');
+    dead_s = game.add.sound('ahir');
     score = 0;
     this.direction = 1;
     this.effect = 0;
